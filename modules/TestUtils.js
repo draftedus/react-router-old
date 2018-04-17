@@ -1,8 +1,9 @@
 var React = require('react');
+var createReactClass = require('create-react-class');
 var RouteHandler = require('./components/RouteHandler');
 var PropTypes = require('./PropTypes');
 
-exports.Nested = React.createClass({
+exports.Nested = createReactClass({
   render: function () {
     return (
       <div>
@@ -13,25 +14,25 @@ exports.Nested = React.createClass({
   }
 });
 
-exports.Foo = React.createClass({
+exports.Foo = createReactClass({
   render: function () {
     return <div className="Foo">Foo</div>;
   }
 });
 
-exports.Bar = React.createClass({
+exports.Bar = createReactClass({
   render: function () {
     return <div className="Bar">Bar</div>;
   }
 });
 
-exports.Baz = React.createClass({
+exports.Baz = createReactClass({
   render: function () {
     return <div className="Baz">Baz</div>;
   }
 });
 
-exports.Async = React.createClass({
+exports.Async = createReactClass({
   statics: {
     delay: 10,
 
@@ -45,7 +46,7 @@ exports.Async = React.createClass({
   }
 });
 
-exports.RedirectToFoo = React.createClass({
+exports.RedirectToFoo = createReactClass({
   statics: {
     willTransitionTo: function (transition) {
       transition.redirect('/foo');
@@ -57,7 +58,7 @@ exports.RedirectToFoo = React.createClass({
   }
 });
 
-exports.RedirectToFooAsync = React.createClass({
+exports.RedirectToFooAsync = createReactClass({
   statics: {
     delay: 10,
 
@@ -75,7 +76,7 @@ exports.RedirectToFooAsync = React.createClass({
 });
 
 
-exports.Abort = React.createClass({
+exports.Abort = createReactClass({
   statics: {
     willTransitionTo: function (transition) {
       transition.abort();
@@ -87,7 +88,7 @@ exports.Abort = React.createClass({
   }
 });
 
-exports.AbortAsync = React.createClass({
+exports.AbortAsync = createReactClass({
   statics: {
     delay: 10,
 
@@ -104,13 +105,13 @@ exports.AbortAsync = React.createClass({
   }
 });
 
-exports.EchoFooProp = React.createClass({
+exports.EchoFooProp = createReactClass({
   render: function () {
     return <div>{this.props.foo}</div>;
   }
 });
 
-exports.EchoBarParam = React.createClass({
+exports.EchoBarParam = createReactClass({
   contextTypes: {
     router: PropTypes.router.isRequired
   },
