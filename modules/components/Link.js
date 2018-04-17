@@ -1,7 +1,7 @@
 var React = require('react');
 var assign = Object.assign;
 var PropTypes = require('../PropTypes');
-var CleanReactProps = require('clean-react-props');
+var CleanReactProps = require('clean-react-props').default;
 
 function isLeftClickEvent(event) {
   return event.button === 0;
