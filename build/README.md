@@ -1,8 +1,19 @@
-[![build status](https://img.shields.io/travis/nkt/react-router-old/master.svg)](https://travis-ci.org/nkt/react-router-old)
-[![npm package](https://img.shields.io/npm/v/react-router.svg)](https://www.npmjs.org/package/react-router)
+[![Build Status](https://travis-ci.org/nkt/react-router-old.svg?branch=master)](https://travis-ci.org/nkt/react-router-old)
+[![npm package](https://img.shields.io/npm/v/react-router-old.svg)](https://www.npmjs.org/package/react-router-old)
 
-React Router
-============
+React Router Old
+================
+
+----------
+
+Imporant note
+-------------
+This is the fork of original React Router. It has been created for adding support
+for React 0.14.x but without a lot of changes, like React Router 1.0.x does.
+I guess there are many typos in docs or comments, but it passed all existed tests
+with React 0.14.x, so you can use this for fluent migrating to React 0.14.
+
+----------
 
 A complete routing library for React.
 

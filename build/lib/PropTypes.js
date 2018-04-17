@@ -1,7 +1,7 @@
 'use strict';
 
-var assign = require('react/lib/Object.assign');
-var ReactPropTypes = require('react').PropTypes;
+var assign = Object.assign;
+var ReactPropTypes = require('prop-types');
 var Route = require('./Route');
 
 var PropTypes = assign({}, ReactPropTypes, {
