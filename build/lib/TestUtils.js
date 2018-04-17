@@ -1,12 +1,11 @@
 'use strict';
 
 var React = require('react');
+var createReactClass = require('create-react-class');
 var RouteHandler = require('./components/RouteHandler');
 var PropTypes = require('./PropTypes');
 
-exports.Nested = React.createClass({
-  displayName: 'Nested',
-
+exports.Nested = createReactClass({
   render: function render() {
     return React.createElement(
       'div',
@@ -21,9 +20,7 @@ exports.Nested = React.createClass({
   }
 });
 
-exports.Foo = React.createClass({
-  displayName: 'Foo',
-
+exports.Foo = createReactClass({
   render: function render() {
     return React.createElement(
       'div',
@@ -33,9 +30,7 @@ exports.Foo = React.createClass({
   }
 });
 
-exports.Bar = React.createClass({
-  displayName: 'Bar',
-
+exports.Bar = createReactClass({
   render: function render() {
     return React.createElement(
       'div',
@@ -45,9 +40,7 @@ exports.Bar = React.createClass({
   }
 });
 
-exports.Baz = React.createClass({
-  displayName: 'Baz',
-
+exports.Baz = createReactClass({
   render: function render() {
     return React.createElement(
       'div',
@@ -57,9 +50,7 @@ exports.Baz = React.createClass({
   }
 });
 
-exports.Async = React.createClass({
-  displayName: 'Async',
-
+exports.Async = createReactClass({
   statics: {
     delay: 10,
 
@@ -77,9 +68,7 @@ exports.Async = React.createClass({
   }
 });
 
-exports.RedirectToFoo = React.createClass({
-  displayName: 'RedirectToFoo',
-
+exports.RedirectToFoo = createReactClass({
   statics: {
     willTransitionTo: function willTransitionTo(transition) {
       transition.redirect('/foo');
@@ -91,9 +80,7 @@ exports.RedirectToFoo = React.createClass({
   }
 });
 
-exports.RedirectToFooAsync = React.createClass({
-  displayName: 'RedirectToFooAsync',
-
+exports.RedirectToFooAsync = createReactClass({
   statics: {
     delay: 10,
 
@@ -110,9 +97,7 @@ exports.RedirectToFooAsync = React.createClass({
   }
 });
 
-exports.Abort = React.createClass({
-  displayName: 'Abort',
-
+exports.Abort = createReactClass({
   statics: {
     willTransitionTo: function willTransitionTo(transition) {
       transition.abort();
@@ -124,9 +109,7 @@ exports.Abort = React.createClass({
   }
 });
 
-exports.AbortAsync = React.createClass({
-  displayName: 'AbortAsync',
-
+exports.AbortAsync = createReactClass({
   statics: {
     delay: 10,
 
@@ -143,9 +126,7 @@ exports.AbortAsync = React.createClass({
   }
 });
 
-exports.EchoFooProp = React.createClass({
-  displayName: 'EchoFooProp',
-
+exports.EchoFooProp = createReactClass({
   render: function render() {
     return React.createElement(
       'div',
@@ -155,9 +136,7 @@ exports.EchoFooProp = React.createClass({
   }
 });
 
-exports.EchoBarParam = React.createClass({
-  displayName: 'EchoBarParam',
-
+exports.EchoBarParam = createReactClass({
   contextTypes: {
     router: PropTypes.router.isRequired
   },

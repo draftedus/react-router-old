@@ -2,24 +2,11 @@
 'use strict';
 
 var React = require('react');
-var assign = require('react/lib/Object.assign');
-var warning = require('warning');
+var assign = Object.assign;
 var DefaultRoute = require('./components/DefaultRoute');
 var NotFoundRoute = require('./components/NotFoundRoute');
 var Redirect = require('./components/Redirect');
 var Route = require('./Route');
-
-function checkPropTypes(componentName, propTypes, props) {
-  componentName = componentName || 'UnknownComponent';
-
-  for (var propName in propTypes) {
-    if (propTypes.hasOwnProperty(propName)) {
-      var error = propTypes[propName](props, propName, componentName);
-
-      if (error instanceof Error) warning(false, error.message);
-    }
-  }
-}
 
 function createRouteOptions(props) {
   var options = assign({}, props);
@@ -38,8 +25,6 @@ function createRouteFromReactElement(element) {
 
   var type = element.type;
   var props = assign({}, type.defaultProps, element.props);
-
-  if (type.propTypes) checkPropTypes(type.displayName, type.propTypes, props);
 
   if (type === DefaultRoute) return Route.createDefaultRoute(createRouteOptions(props));
 

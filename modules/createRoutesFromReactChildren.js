@@ -1,6 +1,6 @@
 /* jshint -W084 */
 var React = require('react');
-var assign = require('react/lib/Object.assign');
+var assign = Object.assign;
 var DefaultRoute = require('./components/DefaultRoute');
 var NotFoundRoute = require('./components/NotFoundRoute');
 var Redirect = require('./components/Redirect');
